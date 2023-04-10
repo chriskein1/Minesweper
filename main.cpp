@@ -11,7 +11,6 @@
 
 int main() {
   srand(time(NULL));
-  unsigned int start_time = time(NULL);
   std::cout << "\033[H\033[J";
   PrintMenu();
 
@@ -26,6 +25,9 @@ int main() {
   // disable terminal echoing 
   DisableEcho();
   std::cout << "\033[H\033[J";
+  
+  // get start time
+  unsigned int start_time = time(NULL);
   while (true) {
     
     PrintMenu();
