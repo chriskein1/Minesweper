@@ -99,8 +99,8 @@ void Game_Board::SetDimensions(int user_row, int user_col) {
 
   // default cursor location is middle of board
   cursor_location = (rows / 2) * cols + cols / 2;
-  // create board dynamically, initialize to 0
-  board = new Board[rows * cols];
+  // dynamically create array of tiles
+  board = new Tile[rows * cols];
   tiles_remaining = rows * cols;
   mines_left = tiles_remaining / 10;
 }
