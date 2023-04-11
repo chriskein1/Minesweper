@@ -1,7 +1,7 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-struct Board {
+struct Tile {
   int state = 0;
   bool revealed = false;
   bool flag = false;
@@ -11,7 +11,7 @@ class Game_Board {
 private:
   int rows;
   int cols;
-  Board *board;
+  Tile *board;
   int cursor_location;
   bool first_move = true;
   bool dead = false;
