@@ -302,10 +302,13 @@ void Game_Board::GetInput() {
           first_move = false;
         }
 
+       // only reveal if we haven't revealed already
+	    if (!board[cursor_location].revealed){
         int user_row = cursor_location / cols;
         int user_col = cursor_location % cols;
         Reveal(user_row, user_col);
         move = true;
+	}
       } else {
         std::cout << "\033[H\033[J";
       }
